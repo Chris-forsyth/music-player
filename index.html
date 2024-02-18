@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://use.typekit.net/scf7dkm.css" >
+    <link rel="stylesheet" href="styles.css"
+    >
+</head>
+<body>
+    <div class="player">
+        <img src="headphones.svg" alt="headphones image" id="headphones">
+        <audio id="player" ontimeupdate="updateprogress()" >
+           <source id="source" />
+        Audio not supported
+        </audio>
+
+        <progress id="progress" value="0" max="100"></progress>
+
+        <div id="controls">
+            <p id="currentsong"></p>
+            <div class="control_wrapper">
+             <span onclick="playaudio ()">&#9658;</span>
+             <span onclick="pauseaudio ()">&#10074;&#10074;</span>
+            </div>
+            <p>Volume</p>
+            <div class="Volume">
+              <span>-</span>
+              <input type="range" id="volumeslider" min="0" max="1" step="0.01" />
+              <span>+</span>
+            </div>  
+        </div>
+    
+
+        <h2>My Songs</h2>
+        <div id="songlist">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
